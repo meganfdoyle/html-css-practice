@@ -1,0 +1,93 @@
+<!DOCTYPE html> <!-- tells the browser we want to use HTML5-->
+<html> <!-- root element; represents the top-level element of the document -->
+<head> <!-- document metadata element; contains things that don't show up on the page (info about the page, scripts, etc.) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Second Page</title> <!-- browser tab text -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body> <!-- content of the page -->
+    <h1>Body of the Page</h1>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li" target="_blank">Lists</a></li>
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol" target="_blank">Ordered</a></li>
+                    <ol>
+                        <!-- span is an inline generic container; can be used to select individual characters -->
+                        <li>Thing <span>One</span></li>
+                        <li>Thing <span>Two</span></li>
+                    </ol>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul" target="_blank">Unordered</a></li>
+                    <ul>
+                        <li>Thing <span>Three</span></li>
+                        <li>Thing <span>Four</span></li>
+                    </ul>
+                <li>Superscript</li>
+                    <ul>
+                        <li>a<sup>2</sup> + b<sup>2</sup> = c<sup><a href="https://en.wikipedia.org/wiki/Pythagorean_theorem" target="_blank">2</a></sup></li>
+                    </ul>
+                <li>Subscript</li>
+                    <ul>
+                        <li>H<sub>2</sub>O</li>
+                    </ul>
+                <li>Entity Codes</li>
+                    <ul>
+                        <li>Start with &amp; and end with &#x3b;</li>
+                        <li>&amphearts&#x3b &#x3d; &hearts;</li>
+                    </ul>
+            </ul>
+    </ul>
+
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a" target="_blank">I am an anchor tag!</a>
+    
+    <h2>Heaviest Birds Table</h2>
+    <table>
+        <thead>
+            <tr>
+                <th rowspan="2">Animal</th>
+                <th colspan="2">Average Mass</th>
+                <th rowspan="2">Flighted</th>
+            </tr>
+            <tr>
+                <th>KG</th>
+                <th>LBS</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Ostrich</td>
+                <td>104</td>
+                <td>230</td>
+                <td>No</td>
+            </tr>
+
+            <tr>
+                <td>Somali Ostrich</td>
+                <td>90</td>
+                <td>200</td>
+                <td>No</td>
+            </tr>
+
+            <tr>
+                <td>Domestic turkey</td>
+                <td>13.5</td>
+                <td>29.8</td>
+                <td>Yes</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>
+        <label for="checkbox">Create a table</label>
+        <input type="checkbox" id="checkbox">
+    </p>
+    
+    <div> <!-- block level element that acts as a generic container -->
+        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+        id="code"
+        alt="Image of code in a text editor">
+    </div>
+</body>
+</html>
