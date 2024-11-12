@@ -14,6 +14,11 @@ h1 {
     letter-spacing: 3px;
 }
 
+/* pseudo classes */
+h1:hover {
+    letter-spacing: 10px;
+}
+
 h2 {
     background-color: rgb(241, 241, 241);
     font-weight: 400;
@@ -50,4 +55,18 @@ div > label {
 
 input[type="password"] {
     color: rgb(143, 55, 202);
+}
+
+/* pseudo class */
+tr:nth-of-type(2n) {
+    background-color: #e6e6e6;
+}
+
+/* pseudo elements */
+h2::first-letter {
+    font-size: 28px;
+}
+
+body::selection {
+    background-color: rgb(71, 4, 71);
 }
