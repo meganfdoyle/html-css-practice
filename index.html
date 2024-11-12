@@ -41,7 +41,13 @@
 
     <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a" target="_blank">I am an anchor tag!</a>
     
-    <h2>Heaviest Birds Table</h2>
+    <h3>Search Google</h3>
+    <form action="https://www.google.com/search" target="_blank">
+        <input type="text" name="q">
+        <button>Search Google</button>
+    </form>
+
+    <h2 id="table">Heaviest Birds Table</h2>
     <table>
         <thead>
             <tr>
@@ -80,14 +86,72 @@
     </table>
 
     <p>
-        <label for="checkbox">Create a table</label>
-        <input type="checkbox" id="checkbox">
+        <input type="checkbox" id="todo" checked>
+        <label for="todo">Create a table</label>
     </p>
+
+    <h3>Shirt Sizes</h3>
+    <form action="/url">
+        <p>
+            <label for="l">L</label>
+            <input type="radio" name="size" id="l" value="l">
+            <label for="xl">XL</label>
+            <input type="radio" name="size" id="xl" value="xl">
+            <label for="2xl">2XL</label>
+            <input type="radio" name="size" id="2xl" value="2xl">
+        </p>
+        <p>
+            <label for="meal">Please select an entree</label>
+            <select name="meal" id="meal">
+                <option value="default" selected>--Please select an option--</option>
+                <option value="fish">Fish</option>
+                <option value="veg">Vegetarian</option>
+                <option value="steak">Steak</option>
+            </select>
+        </p>
+        <button>Submit</button>
+    </form>
+
+    <form>
+        <h2>Race Registration!</h2>
+        <div>
+            <label for="first">First Name</label>
+            <input type="text" id="first" required >
+            <label for="last">Last Name</label>
+            <input type="text" id="last" required>
+        </div>
+        <div>
+            <p>
+                Select a Race:<br>
+                <input type="radio" id="fun" name="race">
+                <label for="fun">Fun Run 5k</label><br>
+                <input type="radio" id="half" name="race">
+                <label for="half">Half Marathon</label><br>
+                <input type="radio" id="full" name="race">
+                <label for="full">Full Marathon</label>
+            </p>
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" id="email">
+            <label for="password">Password</label>
+            <input type="password" id="password">
+        </div>
+        <div>
+            <label for="age">Select Age Group</label>
+            <select name="age" id="age">
+                <option value="child">Under 18</option>
+                <option value="adult">18+</option>
+            </select>
+        </div>
+        <button type="submit">Register!</button>
+    </form>
     
     <div> <!-- block level element that acts as a generic container -->
         <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
         id="code"
         alt="Image of code in a text editor">
     </div>
+    
 </body>
 </html>

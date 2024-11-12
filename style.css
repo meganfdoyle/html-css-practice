@@ -5,3 +5,30 @@
 span {
     color: yellowgreen;
 }
+
+h1 {
+    background-color: #f1f1f1;
+    text-align: center;
+    /* hex colors can be shortened to 3 digits if each pair is the same */
+    /* e.g. #cc55ee can be written as #c5e */
+    letter-spacing: 3px;
+}
+
+h2 {
+    background-color: rgb(241, 241, 241);
+    font-weight: 400;
+}
+
+thead {
+    text-align: left;
+    text-decoration: red underline;
+    /* if a font is unlikely to be built in to a browser/OS, you can list the order of
+    preference for other fonts */
+    /* e.g. if Verdana isn't available on a Mac, Futura will be used */
+    /* this can also be done with serif, sans serif, fantasy, etc. */
+    font-family: Verdana, Futura, Arial;
+}
+
+ol {
+    line-height: 2;
+}
