@@ -21,7 +21,7 @@ h2 {
 
 thead {
     text-align: left;
-    text-decoration: red underline;
+    text-decoration: red underline wavy;
     /* if a font is unlikely to be built in to a browser/OS, you can list the order of
     preference for other fonts */
     /* e.g. if Verdana isn't available on a Mac, Futura will be used */
@@ -31,4 +31,23 @@ thead {
 
 ol {
     line-height: 2;
+}
+
+/* descendant selector; in this case, all <a>'s nested in an <li> */
+li a {
+    color: blue;
+}
+
+/* all buttons preceded by an input */
+input + button {
+    background-color: orange;
+}
+
+/* all labels that are direct descendants of a <div> */
+div > label {
+    text-decoration: purple underline dashed;
+}
+
+input[type="password"] {
+    color: rgb(143, 55, 202);
 }
