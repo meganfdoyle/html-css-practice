@@ -67,6 +67,26 @@ h2::first-letter {
     font-size: 28px;
 }
 
-body::selection {
+/* changes the h1 background to purple when you select */
+h1::selection {
     background-color: rgb(71, 4, 71);
 }
+
+/* The order that styles appear matters. Cascade > the first style will appear but it will
+be overwritten if the same selector is styled to something else  */
+
+/* Specificity
+    - how the browser decides which rules to apply when multiple rules could apply to the 
+      same element
+    - the more specific selector in any case will win out
+        - ID > Class > Element
+        - if you want something to win out over everything else, you can put !important
+            at the end
+*/
+
+/* CSS Inheritance
+    - Child data types can inherit styles from parent data types
+    - Ex. setting the body color to purple will make most elements purple
+        - Some don't inherit styles by default like buttons and inputs
+        - You can force them to inherit styles by using data type: inherit;
+*/
