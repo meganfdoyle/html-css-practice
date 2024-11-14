@@ -1,5 +1,6 @@
 #code {
     width: 550px;
+    border-radius: 50% 20% / 10% 40%;
 }
 
 span {
@@ -26,7 +27,7 @@ h2 {
 
 thead {
     text-align: left;
-    text-decoration: red underline wavy;
+    /* text-decoration: red underline wavy; */
     /* if a font is unlikely to be built in to a browser/OS, you can list the order of
     preference for other fonts */
     /* e.g. if Verdana isn't available on a Mac, Futura will be used */
@@ -71,6 +72,55 @@ h2::first-letter {
 h1::selection {
     background-color: rgb(71, 4, 71);
 }
+
+td {
+    border-width: 2px; /* this on its own doesn't do anything; we need color/style*/
+    border-color: black;
+    border-style: solid;
+    border-left-width: 3px;
+    box-sizing: border-box; /* sets the border boundaries at the box boundary rather than adding on to it*/
+}
+
+th {
+    border: 3px purple inset;
+    padding: 5px;
+}
+
+table {
+    padding: 5px;
+}
+
+
+/*  
+Relative Units
+    - % is always relative to some other value
+        - For width & height, it is a percentage of the parent's width and height
+    - em 
+        - In font-size, refers to the font-size of the parent
+        - With margin, border-radius, etc., it refers to the current element's font-size
+        - Can compound with nested elements like lists
+        - Good for button padding or other things that you want to scale
+    - rem (root em)
+        - Relative to the root html element's font size
+        - Good for most cases; how you want something to look compared to the rest of the document
+
+*/
+
+/* 
+    Padding is the space between content box and the border 
+        - You can specify padding-left, padding-right etc.
+        - You can also do padding: 10px which adds 10px to all four sides
+            - Two values: vertical | horizontal
+            - Three values: top | horizontal | bottom
+            - Four values: top | right | bottom | left
+    Margin is the space outside of an element's border, between that element and something else
+
+    Display Property
+        - Inline: width & height ignored; margin & padding push elements away horizontally
+        - Block: break the flow; width, height, margin, and padding are respected
+        - Inline-block: behaves like an inline element except width, height, margin, & padding are respected
+*/
+
 
 /* The order that styles appear matters. Cascade > the first style will appear but it will
 be overwritten if the same selector is styled to something else  */
