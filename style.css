@@ -60,8 +60,13 @@ input[type="password"] {
 }
 
 /* pseudo class */
-tr:nth-of-type(2n) {
+tr:nth-of-type(2n) { /* every other */
     background-color: #e6e6e6;
+}
+
+tr:nth-of-type(2n + 1) {
+    background-color: #000000;
+    color: white;
 }
 
 /* pseudo elements */
@@ -85,6 +90,11 @@ td {
 th {
     border: 3px purple inset;
     padding: 5px;
+}
+
+table {
+    padding: 5px;
+    opacity: 0.5; /* affects the whole element, text included */
 }
 
 table {
