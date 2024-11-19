@@ -1,0 +1,73 @@
+/* Flexbox
+    - One-dimensional layout method for organizing items in rows/columns
+    - Allows us to distribute space dynamically across elements of an unknown size
+
+    Notes: 
+    - display MUST be set to flex in the containing element
+        - Two axes within the box: main (horizontal) and cross (vertical)
+        - flex-direction allows you to change the direction of flow
+            - default is left to right and top to bottom
+            - row-reverse changes the flow horizontally, starting from the right and moving left
+            - column-reverse does something similar, reversing the flow so that it's bottom to top
+        - justify-content determines how content is distributed across the main axis
+            - default: flex-start which is at the start of the main axis
+            - flex-end begins at the end of the main axis
+            - center will center the content along the main axis
+            - space-between assigns an equal amount of space between content but not at the outer edges
+            - space-around assigns equal space around all elements
+                - this means there is half as much space between the edge elements 
+                  and the border of the box
+            - can be horizontal or vertical
+        - flex wrap determines whether elements wrap along main axis onto a new line if it's
+          horizontal or a new column if it's a vertical main axis
+        - align-items is used to align content along the cross axis
+        - align-self is a property added to individual items in the flex container
+        - flex-basis defines the intial size of an element before additional space is distributed
+        - flex-grow controls the amount of available space an element should take up
+        - flex-shrink: if items are larger than the container, they shrink according to flex-shrink
+
+*/
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+#container {
+    background-color: #003049;
+    width: 90%;
+    height: 500px;
+    margin: 0 auto;
+    border: 5px solid #003049;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* flex-wrap: wrap-reverse; */
+    align-items: flex-end;
+}
+
+#container div {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    font-size: 4em;
+    transition: border-radius 0.2s;
+}
+
+#container div:hover {
+    border-radius: 50%;
+} 
+
+#container div:nth-of-type(5) {
+height: 100px;
+background-color: #6930c3; 
+transition: border-radius 1s, background-color 2s;
+}
+
+#container div:nth-of-type(5):hover {
+    border-radius: 0% 70% / 10% 90%;
+    background-color: red;
+}
