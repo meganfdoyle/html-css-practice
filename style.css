@@ -209,6 +209,13 @@ Relative Units
         - Inline-block: behaves like an inline element except width, height, margin, & padding are respected
 */
 
+/*
+Background Image
+    - If using background size, it can only be included after the position separated with /
+        - e.g., center/cover
+    - Position refers the point where you want the image to start from (top, bottom, etc.)
+    - Size refers to how the image is sized (contain, cover, percentages, px)
+*/
 
 /* The order that styles appear matters. Cascade > the first style will appear but it will
 be overwritten if the same selector is styled to something else  */
