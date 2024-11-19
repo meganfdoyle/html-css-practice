@@ -1,5 +1,10 @@
 #code {
     width: 550px;
+    padding-top: 10px;
+    transition: border-radius 1s;
+}
+
+#code:hover {
     border-radius: 50% 20% / 10% 40%;
 }
 
@@ -102,12 +107,72 @@ table {
     opacity: 0.5; /* affects the whole element, text included */
 }
 
+
+/* 
+Transitions: 
+    property name | duration | timing function | delay  
+*/
+
+.transitions div {
+    width: 100px;
+    height: 100px;
+    margin: 20px 0;
+    background-color:rgb(55, 202, 190);
+    transition: margin-left 3s;
+}
+
+.transitions:hover div {
+    margin-left: 500px;
+}
+
+.circle:nth-of-type(1) {
+    transition-timing-function: ease-in;
+}
+
+.circle:nth-of-type(2) {
+    transition-timing-function: ease-out;
+}
+
+.circle:nth-of-type(3) {
+    transition-timing-function: cubic-bezier(0.7, 0, 0.84, 0);
+}
+
+.circle:nth-of-type(4) {
+    transition-timing-function: cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+#fancy {
+    height: 200px;
+    background-color: #151b29;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#button {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    background: none;
+    color: #ffa260;
+    border: 2px solid;
+    padding: 1em 2em;
+    transition: color 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+#button:hover {
+    border-color: #f1ff5c;
+    color: white;
+    box-shadow: 0 0.5em 0.5em -0.4em #f1ff5c;
+    transform: translateY(-0.25em);
+    cursor:pointer;
+}
+
 /* 
 Position
     - Static: default
     - Relative: now you can use top, left, bottom, and right to move it relative to where its default position is
     - Absolute: the element is removed from it's normal flow in the document
-        - positioned relative to its clost positioned ancestro if any
+        - positioned relative to its closest positioned ancestor if any
         - otherwise, placed relative to the initial containing block
     - Fixed: positioned relative to the the initial containing block
         - good for nav bars because it will stay wherever you position it
