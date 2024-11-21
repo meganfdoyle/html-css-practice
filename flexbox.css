@@ -25,7 +25,7 @@
         - flex-basis defines the intial size of an element before additional space is distributed
         - flex-grow controls the amount of available space an element should take up
         - flex-shrink: if items are larger than the container, they shrink according to flex-shrink
-
+        - flex on its own allows you to specify values for flex-grow | flex-shrink | flex-basis
 */
 
 body {
@@ -61,13 +61,20 @@ h1 {
     border-radius: 50%;
 } 
 
-#container div:nth-of-type(5) {
-height: 100px;
-background-color: #6930c3; 
-transition: border-radius 1s, background-color 2s;
+main {
+    width: 80%;
+    margin: 0 auto;
+    border: 5px solid black;
+    height: 500px;
+    display: flex;
 }
 
-#container div:nth-of-type(5):hover {
-    border-radius: 0% 70% / 10% 90%;
-    background-color: red;
+main .sidebar {
+    background-color: #6930c3;
+    flex: 1 2 300px;
+}
+
+main .maincontent {
+    background-color: #80ffdb;
+    flex: 2 800px;
 }
