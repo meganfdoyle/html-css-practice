@@ -1,0 +1,80 @@
+/*
+Media Queries
+        - Allow us to modify styles depending on particular parameters like screen width or device type
+        - Begin with @media with parantheses containing media features
+
+*/
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-size: 6em;
+    text-align: center;
+}
+nav {
+    font-size: 1.5em;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul,li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+ 
+ul {
+    border: 1px solid red;
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+@media (max-width: 100px) {
+    h1 {
+        color: red;
+    }
+}
+
+@media (min-width: 101px) and (max-width: 200px) {
+    h1 {
+        color: orange;
+    }
+}
+
+@media (min-width: 201px) and (max-width: 300px) {
+    h1 {
+        color: yellow;
+    }
+}
+
+@media (min-width: 301px) and (max-width: 400px) {
+    h1 {
+        color: green;
+    }
+}
+
+/* @media (orientation: landscape) {
+    body {
+        background-color: magenta;
+    }
+} */
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 4em;
+    }
+    nav, nav ul {
+        flex-direction: column;
+        align-items: center;
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 3em;
+    }
+}
